@@ -6,7 +6,7 @@ import "./css/kickstart.css";
 import "./css/animate.css";
 import "./css/mobile.css";
 import "./css/desktop.css";
-//
+////////
 import iconTwiter from "./icons/twitter-brands.svg";
 import Animations from "./utils/Animations";
 import Colors from "./utils/Colors";
@@ -23,7 +23,7 @@ class App extends React.Component<{}, AppState, any> {
   private divQuoteContainer: any;
 
   constructor() {
-    super({}, null);
+    super({});
     this.divQuoteContainer = React.createRef();
     this.state = {
       quote: Quotes.getQuote(),
