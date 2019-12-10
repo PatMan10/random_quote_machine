@@ -1,8 +1,3 @@
-export interface IQuote {
-  author: string;
-  text: string;
-}
-
 class Quote {
   constructor(
     private _author: string = "Anonymous",

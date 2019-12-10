@@ -1,25 +1,28 @@
-import React from "react";
-/////////
+//-------------CSS----------------
 import "./css/normalise.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/kickstart.css";
 import "./css/animate.css";
 import "./css/mobile.css";
 import "./css/desktop.css";
-////////
-import iconTwiter from "./icons/twitter-brands.svg";
+//-------------LIBS----------------
+import React from "react";
+//-------------ICONS----------------
+import iconTwiter from "./assests/icons/twitter-brands.svg";
+//-------------MODELS----------------
+import Quote from "./models/Quote";
+//-------------UTILS----------------
 import Animations from "./utils/Animations";
 import Colors from "./utils/Colors";
 import F from "./utils/Functions";
-import Quote from "./models/Quote";
 import Quotes from "./utils/Quotes";
 
-interface AppState {
+interface State {
   quote: Quote;
   color: string;
 }
 
-class App extends React.Component<{}, AppState, any> {
+class App extends React.Component<{}, State> {
   private divQuoteContainer: any;
 
   constructor() {
@@ -47,10 +50,10 @@ class App extends React.Component<{}, AppState, any> {
         <div className="white-bg jumbotron">
           <div
             id="quote-container"
-            className="quote-container"
+            className="flex-col"
             ref={this.divQuoteContainer}
           >
-            <p id="quote" className="quote" style={{ color: color }}>
+            <p id="quote" style={{ color: color }}>
               <span>&quot;</span>
               <span id="quote-text">{quote.text}</span>
               <span>&quot;</span>
@@ -60,7 +63,7 @@ class App extends React.Component<{}, AppState, any> {
               className="flex-asE"
               style={{ color: color }}
             >
-              {quote.author}
+              - {quote.author}
             </label>
           </div>
           <div className="flex-row-jcSB flex-aiC">

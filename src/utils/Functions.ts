@@ -1,12 +1,12 @@
 class Functions {
   static animate(
     classes: [string, string],
-    element: any,
+    element: HTMLElement,
     duration: number
   ): void {
-    classes.forEach(c => element.classList.add(c));
+    element.classList.add(classes[0], classes[1]);
     setTimeout(
-      () => classes.forEach(c => element.classList.remove(c)),
+      () => element.classList.remove(classes[0], classes[1]),
       duration
     );
   }

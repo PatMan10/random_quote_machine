@@ -3,7 +3,8 @@ import Quote from "../models/Quote";
 
 class Quotes {
   static getQuote(): Quote {
-    const q = arrQuotes[F.getRandomInt(arrQuotes.length)];
+    const randomIndex = F.getRandomInt(arrQuotes.length);
+    const q = arrQuotes[randomIndex];
     return new Quote(q.author, q.body);
   }
 }
