@@ -1,8 +1,8 @@
 //-------------CSS----------------
-import "./css/normalise.css";
+import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/kickstart.css";
-import "./css/animate.css";
+import "pmt-kickstart.css/src/kickstart.min.css";
+import "animate.css/animate.min.css";
 import "./css/mobile.css";
 import "./css/desktop.css";
 //-------------LIBS----------------
@@ -44,7 +44,7 @@ class App extends React.Component<{}, State> {
     return (
       <main
         id="main"
-        className="container flex-row-jcC-aiC h-100vh t1"
+        className="container flex-row-aiC-jcC h-100vh t1"
         style={{ backgroundColor: color }}
       >
         <div className="white-bg jumbotron">
