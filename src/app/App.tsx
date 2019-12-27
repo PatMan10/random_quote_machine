@@ -17,16 +17,18 @@ import Colors from "./utils/Colors";
 import F from "./utils/Functions";
 import Quotes from "./utils/Quotes";
 
+interface Props {}
+
 interface State {
   quote: Quote;
   color: string;
 }
 
-class App extends React.Component<{}, State> {
+class App extends React.Component<Props, State> {
   private divQuoteContainer: any;
 
-  constructor() {
-    super({});
+  constructor(props: Props) {
+    super(props);
     this.divQuoteContainer = React.createRef();
     this.state = {
       quote: Quotes.getQuote(),
