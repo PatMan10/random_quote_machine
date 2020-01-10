@@ -1,7 +1,7 @@
 //-------------CSS----------------
 import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "pmt-kickstart.css/src/kickstart.min.css";
+import "@patman10/kickstart.css/dist/kickstart.min.css";
 import "animate.css/animate.min.css";
 import "./css/mobile.css";
 import "./css/desktop.css";
@@ -36,10 +36,10 @@ class App extends React.Component<Props, State> {
     };
   }
 
-  onclickNewQuote() {
+  newQuote = () => {
     this.setState({ quote: Quotes.getQuote(), color: Colors.getColor() });
     F.animate(Animations.getAnimation(), this.divQuoteContainer.current, 1000);
-  }
+  };
 
   render() {
     const { quote, color } = this.state;
@@ -83,7 +83,7 @@ class App extends React.Component<Props, State> {
             <input
               id="new-quote"
               className="btn btn-secondary t1"
-              onClick={() => this.onclickNewQuote()}
+              onClick={this.newQuote}
               style={{ backgroundColor: color }}
               type="button"
               value="New Quote"
